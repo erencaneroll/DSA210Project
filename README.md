@@ -115,18 +115,23 @@ After collecting player performance data using the ESPN Fantasy API, I conducted
 The process included:
 
 Data Cleaning: Removing incomplete records, ensuring only players with defined positions and fantasy points were considered.
+
 Exploratory Data Analysis (EDA): Calculating and visualizing the average fantasy points contributed by each position (PG, SG, SF, PF, C) across multiple weeks.
+
 Visualization: A bar chart was created to visually compare average fantasy contributions between positions. The graph was saved as figure/position_avg_points.png.
-Hypothesis Testing:
-A one-way ANOVA test was conducted to determine if the differences in mean fantasy points across player positions were statistically significant.
+
+Hypothesis Testing: A one-way ANOVA test was conducted to determine if the differences in mean fantasy points across player positions were statistically significant.
 The ANOVA test returned, strongly rejecting the null hypothesis (H0).
 This result supports the alternative hypothesis (H1), confirming that player position significantly affects fantasy point contributions in my NBA Fantasy team.
 
 Evaluation Methods
 
 Statistical Test Used: One-way ANOVA, appropriate for comparing mean values across multiple independent groups (positions).
+
 Data Validity: Real weekly data from ESPN Fantasy ensured authentic, gameplay-driven insights.
+
 Visualization Support: Data-driven bar chart analysis visually reinforced the statistical findings.
+
 Reproducibility: All data collection and analysis steps were automated and reproducible with updated ESPN Fantasy data.
 By integrating real-world data with statistical evaluation, this project successfully bridged theoretical hypothesis and practical fantasy team optimization strategies.
 
