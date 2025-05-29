@@ -1,0 +1,5 @@
+espn_api==0.45.0
+matplotlib==3.10.3
+pandas==2.2.3
+scikit_learn==1.6.1
+scipy==1.15.3
