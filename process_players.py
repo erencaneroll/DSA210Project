@@ -1,7 +1,6 @@
 from collections import Counter
 from espn_api.basketball import League
-from collect_data import fetch_all_player
-
+from collect_data import fetch_all_player, save_historical_data
 
 # Replace with my details
 league_id = 1937531242  # my league ID
@@ -18,3 +17,4 @@ espn_s2 = ("AEBXZygTTQ9lwpUMTjrlaqi70u8ao47ec7vHdc2RdJOJewjYfOorUs6N4"
 league = League(league_id=league_id, year=season_year, swid=swid, espn_s2=espn_s2)
 
 fetch_all_player(league)
+save_historical_data(league, total_weeks=10)
