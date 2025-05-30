@@ -135,3 +135,21 @@ Visualization Support: Data-driven bar chart analysis visually reinforced the st
 Reproducibility: All data collection and analysis steps were automated and reproducible with updated ESPN Fantasy data.
 By integrating real-world data with statistical evaluation, this project successfully bridged theoretical hypothesis and practical fantasy team optimization strategies.
 
+Final Report
+
+This project investigates whether a player’s position significantly impacts their fantasy performance in ESPN NBA Fantasy Basketball. The goal is to provide a data-driven strategy for fantasy team management by identifying statistical patterns and evaluating how individual game stats and player positions influence total fantasy points.
+
+We began by collecting data through the `espn_api` Python package. A custom data extraction function was developed to fetch the rosters of all teams in the league, including free agents. For each player, we recorded their name, position, team, and total fantasy points. Additionally, we gathered detailed weekly box score statistics over a 10-week period, capturing key metrics such as three-pointers made (3PM), rebounds (REB), assists (AST), steals (STL), blocks (BLK), turnovers (TO), and points scored (PTS), along with the corresponding fantasy points earned each week.
+
+Once the data was structured and saved in JSON and CSV formats, we conducted an initial statistical analysis. We grouped the players by position (PG, SG, SF, PF, C) and calculated the average fantasy points for each group. A bar chart visualization highlighted the performance differences across positions. To test whether these differences were statistically significant, we performed a one-way ANOVA (Analysis of Variance). The resulting p-value (1.21624e-08) was far below the 0.05 threshold, confirming that **player position has a statistically significant effect on fantasy performance**.
+
+Building on this insight, we then trained a multiple linear regression model using the weekly player statistics and position data. We converted categorical position data into numerical features using one-hot encoding. The model was trained and tested using an 80/20 train-test split. The regression results were highly promising, yielding an R² score of **0.9940**, which indicates excellent predictive power. The model's coefficients revealed the relative influence of each statistical feature on fantasy performance. Notably, points, rebounds, assists, and blocks were among the most impactful metrics, while the player's position also showed measurable effects—particularly for centers (C), who had the highest positive coefficient, and point guards (PG), who had a negative one.
+
+We also visualized feature importance and the relationship between actual and predicted fantasy points. The predicted values closely matched the real data, supporting the model's reliability.
+
+Conclusion
+
+This project successfully demonstrates that both in-game performance metrics and player positions significantly contribute to fantasy outcomes. The ANOVA test confirms that position-based differences are statistically significant, while the regression model quantifies the impact of specific features. Together, these findings support the hypothesis that **fantasy basketball roster decisions can be optimized through data-driven, position-aware analysis**. This methodology can be extended to create predictive tools that assist fantasy managers in drafting, trading, and starting players based on empirical performance trends.
+
+
+
